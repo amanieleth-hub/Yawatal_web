@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Yawatal</title>
+<meta name="description" content="Get in touch with the Yawatal team for support, billing questions, privacy requests, or feedback.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="mark"><i></i><i></i><i></i></span>
+        Yawatal <span class="amh">ያዋጣል</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost">Contact</a>
+        <a href="pricing.html#join" class="btn btn-primary">Join the beta</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span>Contact</div>
+      <h1>Reach the team behind Yawatal.</h1>
+      <p class="lede">Whether it's a bug, a billing question, or feedback from the road — this goes directly to support, not a queue.</p>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom:none;">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h3>Send a message</h3>
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option>General question</option>
+              <option>Technical issue</option>
+              <option>Billing &amp; subscription</option>
+              <option>Privacy request</option>
+              <option>Partnership</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p style="font-size:.8rem; margin-top:12px;">This opens your email app with the message pre-filled — Yawatal's site has no backend that stores form submissions.</p>
+        </form>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:20px;">
+          <h3>Direct channels</h3>
+          <p><strong style="color:var(--text);">Support email</strong><br>support@yawatal.com</p>
+          <p><strong style="color:var(--text);">Telegram</strong><br>@yawatal_support</p>
+          <p style="margin:0;"><strong style="color:var(--text);">Based in</strong><br>Addis Ababa, Ethiopia</p>
+        </div>
+        <div class="card">
+          <h3>Before you write in</h3>
+          <p style="margin:0;">Technical questions about permissions, supported apps, or billing are often already answered on the <a href="faq.html" style="color:var(--accent);">FAQ page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand" style="margin-bottom:14px;">
+            <span class="mark"><i></i><i></i><i></i></span>
+            Yawatal <span class="amh">ያዋጣል</span>
+          </a>
+          <p style="max-width:32ch;">A real-time profitability check for Addis Ababa ride-hailing drivers, running quietly over the apps you already use.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ &amp; support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms-of-service.html">Terms of service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Yawatal. Not affiliated with Yango Pro, RIDE, Feres, ZayRide, Safe, or Seregela.</span>
+        <span class="lang-note">EN / አማርኛ</span>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

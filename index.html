@@ -1,1 +1,231 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yawatal</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Yawatal</h1><p>Know Before You Accept</p><nav><a href="#about">About</a> <a href="#features">Features</a> <a href="privacy/index.html">Privacy</a> <a href="terms/index.html">Terms</a></nav></header><section id="about"><h2>About</h2><p>Yawatal helps Ethiopian ride-hailing drivers evaluate trips before accepting.</p></section><section id="features"><h2>Features</h2><ul><li>Trip analysis</li><li>Accessibility powered</li><li>Privacy first</li></ul></section><section><h2>Contact</h2><p>Email: support@yawatal.com</p><p>Addis Ababa, Ethiopia</p></section><footer>©2026 Yawatal Mobility Technologies</footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yawatal (ያዋጣል) — Know if a ride is worth it, before you accept</title>
+<meta name="description" content="Yawatal shows Addis Ababa ride-hailing drivers a real-time GREEN, YELLOW, or RED verdict on every trip request across Yango Pro, RIDE, Feres, ZayRide, Safe, and Seregela.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="mark"><i></i><i></i><i></i></span>
+        Yawatal <span class="amh">ያዋጣል</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost">Contact</a>
+        <a href="pricing.html#join" class="btn btn-primary">Join the beta</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>For Addis Ababa ride-hailing drivers</div>
+        <h1>Know if a ride is worth it — before you tap accept.</h1>
+        <p class="lede">Yawatal reads the trip request already on your screen — across Yango Pro, RIDE, Feres, ZayRide, Safe, and Seregela — and shows a plain GREEN, YELLOW, or RED verdict based on what the trip actually earns you per minute, after fuel.</p>
+        <div class="btn-row">
+          <a href="pricing.html#join" class="btn btn-primary">Join the beta</a>
+          <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+        </div>
+        <div class="tag-row" style="margin-top:32px;">
+          <span class="tag">Works over your existing driver apps</span>
+          <span class="tag">English &amp; አማርኛ</span>
+          <span class="tag">No account switching</span>
+        </div>
+      </div>
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-app-chrome"><span>Yango Pro</span><span>09:41</span></div>
+            <div class="trip-card">
+              <div class="route">Bole → CMC</div>
+              <div class="fare" data-fare>145.00 ETB</div>
+              <div class="meta"><span data-sub>4.2 km · 12 min · 12.1 ETB/min</span></div>
+              <div class="verdict-row">
+                <span class="verdict-pill green" data-verdict-cycle><span class="dot"></span>GREEN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow r" style="justify-content:center;"><span class="dot"></span>The problem</div>
+        <h2>Every ride app shows you a fare. None of them show you a profit.</h2>
+        <p class="lede" style="margin:0 auto;">Drivers juggling several platforms end up guessing which requests are worth the fuel and time — often deciding in the two or three seconds before a request expires.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Fuel isn't free</h3>
+          <p>A long pickup or a short paid trip can quietly cost more in fuel than it earns.</p>
+        </div>
+        <div class="card">
+          <h3>Seconds to decide</h3>
+          <p>Trip requests expire fast — there's no time to mentally run the math on distance, time, and fare.</p>
+        </div>
+        <div class="card">
+          <h3>Six different apps</h3>
+          <p>Each platform prices differently, so "a good fare" on one app isn't the same number on another.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow g"><span class="dot"></span>How it works</div>
+        <h2>Three steps, and it's already done by the time you look.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>A trip request appears on your driver app</h3>
+            <p>Yawatal runs quietly alongside Yango Pro, RIDE, Feres, ZayRide, Safe, or Seregela — you keep using the app exactly as before.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Yawatal reads the fare, distance, and duration already on screen</h3>
+            <p>Using Android's Accessibility Service, it reads the text and colors already visible on your screen — nothing is typed or tapped on your behalf.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>A verdict appears in a small floating overlay</h3>
+            <p>GREEN, YELLOW, or RED, worked out from ETB per minute and per km after an estimated fuel cost — so you glance once and decide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow y" style="justify-content:center;"><span class="dot"></span>The verdict system</div>
+        <h2>One glance. Three colors. No guessing.</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="verdict-pill green"><span class="dot"></span>Green</span>
+          <p style="margin-top:16px;">Solidly profitable after fuel. Worth taking without a second thought.</p>
+        </div>
+        <div class="card">
+          <span class="verdict-pill yellow"><span class="dot"></span>Yellow</span>
+          <p style="margin-top:16px;">Marginal. Fine if you're heading that way anyway, worth a pause otherwise.</p>
+        </div>
+        <div class="card">
+          <span class="verdict-pill red"><span class="dot"></span>Red</span>
+          <p style="margin-top:16px;">Likely to cost you more in time and fuel than it pays. Yawatal flags it before you accept.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="justify-content:center;"><span class="dot"></span>Where it works</div>
+        <h2>Built for the platforms Addis Ababa drivers actually run.</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="platform-chip">Yango Pro</div>
+        <div class="platform-chip">RIDE</div>
+        <div class="platform-chip">Feres</div>
+        <div class="platform-chip">ZayRide</div>
+        <div class="platform-chip">Safe</div>
+        <div class="platform-chip">Seregela</div>
+      </div>
+      <p style="text-align:center; margin-top:24px; font-size:.85rem;">Yawatal is an independent driver tool and is not affiliated with, endorsed by, or sponsored by any of the platforms above.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2" style="align-items:center;">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>Built in two languages</div>
+        <h2>Yawatal speaks the language you drive in.</h2>
+        <p class="lede">Switch the whole app between English and <span class="amh">አማርኛ</span> — verdicts, alerts, and settings included.</p>
+      </div>
+      <div class="card">
+        <p class="amh" style="font-size:1.3rem; color:var(--text); margin-bottom:8px;">ያዋጣል? — “Is it worth it?”</p>
+        <p style="margin:0;">The name asks the same question every driver already asks before accepting a trip — Yawatal just answers it faster.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom:none;">
+    <div class="container card text-center" style="padding:56px;">
+      <h2>Stop guessing at trip requests.</h2>
+      <p class="lede" style="margin:0 auto 20px;">Join the Yawatal beta and get a verdict on every request, on every app, before you decide.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="pricing.html#join" class="btn btn-primary">Join the beta</a>
+        <a href="faq.html" class="btn btn-ghost">Read the FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand" style="margin-bottom:14px;">
+            <span class="mark"><i></i><i></i><i></i></span>
+            Yawatal <span class="amh">ያዋጣል</span>
+          </a>
+          <p style="max-width:32ch;">A real-time profitability check for Addis Ababa ride-hailing drivers, running quietly over the apps you already use.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ &amp; support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms-of-service.html">Terms of service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Yawatal. Not affiliated with Yango Pro, RIDE, Feres, ZayRide, Safe, or Seregela.</span>
+        <span class="lang-note">EN / አማርኛ</span>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Yawatal</title>
+<meta name="description" content="Why Yawatal exists, who builds it, and how its rule-based verdict engine works — built for Addis Ababa ride-hailing drivers.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="mark"><i></i><i></i><i></i></span>
+        Yawatal <span class="amh">ያዋጣል</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html" class="active">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-ghost">Contact</a>
+        <a href="pricing.html#join" class="btn btn-primary">Join the beta</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:20px;">
+    <div class="container">
+      <div class="eyebrow"><span class="dot"></span>About</div>
+      <h1>Built for one job: telling you if a trip is worth taking.</h1>
+      <p class="lede">Yawatal started from a simple, repeated frustration — accepting a request that looked fine on screen and realizing, halfway through the trip, that it wasn't.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2" style="align-items:center;">
+      <div>
+        <div class="eyebrow g"><span class="dot"></span>Why it exists</div>
+        <h2>Drivers see a fare. They rarely see a profit.</h2>
+        <p>Every ride-hailing app in Addis Ababa shows a price before you accept — but none of them show what that price is actually worth once distance, time, and fuel are accounted for. Multiply that across several apps running on the same phone, and the mental math becomes impossible to do in the two or three seconds before a request expires.</p>
+        <p>Yawatal is built to close exactly that gap, and nothing more.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow"><span class="dot"></span>Who's behind it</div>
+        <h3>An independent, single-developer product</h3>
+        <p style="margin:0;">Yawatal is designed, built, and operated by a solo developer based in Addis Ababa — iterating directly with driver feedback rather than through a large product team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow y"><span class="dot"></span>How the verdict is calculated</div>
+        <h2>A deterministic engine, on purpose.</h2>
+        <p class="lede">Yawatal's verdicts come from a fixed set of rules and thresholds — not a machine-learning model making a probabilistic guess.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>ETB / minute &amp; ETB / km</h3>
+          <p>The two core figures behind every request, compared against clear thresholds.</p>
+        </div>
+        <div class="card">
+          <h3>Fuel cost</h3>
+          <p>An estimated fuel cost for the trip distance is subtracted before a verdict is decided.</p>
+        </div>
+        <div class="card">
+          <h3>Fare tier &amp; zone</h3>
+          <p>Surge and mid-tier fares, and zone-specific multipliers, adjust the calculation the same way they'd adjust your own mental math.</p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:32px;">
+        We'd rather be upfront: Yawatal today is a transparent, rule-based calculator — not artificial intelligence. Forecasting features (like time-of-day demand patterns) are on the roadmap, and we'll say clearly if and when machine learning becomes part of how a verdict is produced.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-bottom:none;">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow" style="justify-content:center;"><span class="dot"></span>What we optimize for</div>
+        <h2>Three things Yawatal won't compromise on</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Driver-first</h3>
+          <p style="margin:0;">Yawatal is built to serve the person driving, not the platforms it reads from.</p>
+        </div>
+        <div class="card">
+          <h3>Transparency</h3>
+          <p style="margin:0;">If we can't explain how a verdict was reached in plain language, it doesn't ship.</p>
+        </div>
+        <div class="card">
+          <h3>Respect for your screen</h3>
+          <p style="margin:0;">Yawatal reads what's already on screen to calculate a verdict — it never taps, types, or acts on your behalf.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand" style="margin-bottom:14px;">
+            <span class="mark"><i></i><i></i><i></i></span>
+            Yawatal <span class="amh">ያዋጣል</span>
+          </a>
+          <p style="max-width:32ch;">A real-time profitability check for Addis Ababa ride-hailing drivers, running quietly over the apps you already use.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ &amp; support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="terms-of-service.html">Terms of service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Yawatal. Not affiliated with Yango Pro, RIDE, Feres, ZayRide, Safe, or Seregela.</span>
+        <span class="lang-note">EN / አማርኛ</span>
+      </div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
+</body>
+</html>
