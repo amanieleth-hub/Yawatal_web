@@ -18,7 +18,9 @@
   .content{max-width:720px;margin:0 auto;padding:0 20px}
   .section{margin-top:28px;background:var(--surface);border-radius:14px;
     border:1px solid var(--border);overflow:hidden}
+  .section.highlight{border:1px solid var(--accent)}
   .sec-head{background:linear-gradient(90deg,#1A3C6E,#1e3a6e);padding:13px 20px}
+  .section.highlight .sec-head{background:linear-gradient(90deg,#1E40AF,#2563EB)}
   .sec-head h2{font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.04em}
   .sec-body{padding:18px 20px}
   p{margin-bottom:12px;font-size:14px;color:var(--text)}
@@ -30,16 +32,21 @@
   .row .l{color:var(--muted)}.row .r{color:var(--text);font-weight:500;text-align:right}
   .info{background:#1e3a5f;border:1px solid #2563EB;border-radius:10px;
     padding:14px 18px;margin-bottom:16px;font-size:13px;color:#93C5FD;line-height:1.7}
+  .apps{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .apps span{background:#0F2744;border:1px solid var(--border);border-radius:8px;
+    padding:5px 12px;font-size:13px;color:#93C5FD}
   .footer{margin-top:40px;text-align:center;padding:20px;
     border-top:1px solid var(--border);color:var(--muted);font-size:12px}
   a{color:#60A5FA}
+  strong.no{color:#FCA5A5}
+  strong.yes{color:#86EFAC}
   @media(max-width:480px){.row{flex-direction:column;gap:4px}.row .r{text-align:left}}
 </style>
 </head>
 <body>
 <div class="hero">
   <h1>Yawatal (ያዋጣል)</h1>
-  <p>Privacy Policy · Effective June 10, 2026 · Version 1.0</p>
+  <p>Privacy Policy · Effective July 21, 2026 · Version 1.1</p>
 </div>
 <div class="content">
 
@@ -54,43 +61,81 @@
 <p><strong>Account Information:</strong></p>
 <ul><li>Phone number (OTP verification and account identification)</li>
 <li>Full name, city, vehicle type, platforms operated, driving experience</li></ul>
-<p><strong>Accessibility-Derived Data</strong> (only when enabled by you):</p>
-<ul><li>Fare amount on ride request screens</li>
-<li>Pickup distance indicator</li>
-<li>Destination zone or area name</li>
-<li>Trip distance indicator</li></ul>
 <p><strong>Location:</strong> Approximate GPS for pickup distance and zone classification. Processed on-device, not stored on servers.</p>
 <p><strong>Firebase Services Used:</strong></p>
 <div class="row"><span class="l">Firebase Auth (Anonymous)</span><span class="r">Secure session without email/password</span></div>
 <div class="row"><span class="l">Cloud Firestore</span><span class="r">Driver profile, subscription, OTP records</span></div>
 <div class="row"><span class="l">Crash Analytics</span><span class="r">Anonymised crash diagnostics only</span></div>
+<p style="margin-top:12px">See Section 3 for how we use Android's Accessibility Service, which is a separate permission covered on its own below.</p>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>3. Information We Do NOT Collect</h2></div><div class="sec-body">
+<div class="section highlight"><div class="sec-head"><h2>3. Accessibility Service and Screen-Reading Access</h2></div><div class="sec-body">
+
+<p><strong>Why we request this permission</strong></p>
+<p>Yawatal uses the Android Accessibility Service to read trip-offer information displayed on your screen inside the ride-hailing driver apps you already have installed, so we can show you a real-time GREEN / YELLOW / RED recommendation before you accept or decline a trip. None of these platforms provide this information through any public API, webhook, or notification, so on-screen reading is the only way to access it.</p>
+
+<p><strong>Apps this applies to</strong></p>
+<div class="apps">
+  <span>Yango Pro</span><span>RIDE</span><span>Feres</span><span>Safe</span>
+  <span>ZayRide</span><span>Seregela</span><span>Little</span><span>Taxiye</span>
+</div>
+<p>Yawatal only reads on-screen content from these eight apps. It does not read content from any other app on your device.</p>
+
+<p><strong>What we read</strong></p>
+<ul>
+  <li>Fare amount shown on the ride request screen</li>
+  <li>Pickup distance indicator</li>
+  <li>Trip distance indicator</li>
+  <li>Destination zone or area name</li>
+</ul>
+
+<p><strong>What we never do</strong></p>
+<p>Yawatal's use of Accessibility Service is <strong class="no">read-only</strong>. It never taps, clicks, fills in forms, or otherwise interacts with any app on your behalf. It never accepts or declines a trip for you — every decision is made manually by you, inside your own ride-hailing app, exactly as it would work without Yawatal installed. It never reads messages, contacts, banking apps, photos, or any app outside the eight listed above.</p>
+
+<p><strong>What we do with this data</strong></p>
+<ul>
+  <li>Processed on-device to compute a trip-quality score and overlay color</li>
+  <li>Stored under your authenticated account in Firestore to power your own trip history</li>
+  <li><strong class="yes">Not</strong> sold, ever</li>
+  <li><strong class="yes">Not</strong> shared with the ride-hailing platforms</li>
+  <li><strong class="yes">Not</strong> shared with advertisers or data brokers</li>
+  <li><strong class="yes">Not</strong> used to train third-party AI models</li>
+</ul>
+
+<p><strong>Retention</strong></p>
+<p>We keep your <strong>most recent 100 trip records</strong>. Once a new trip record is saved beyond your 100th, the oldest record is automatically deleted. You can also delete all trip history immediately via Settings → Danger Zone, or by requesting full account deletion (Section 7).</p>
+
+<p><strong>Your control</strong></p>
+<p>You can disable Accessibility permission at any time from Yawatal's own Settings screen or from Android Settings → Accessibility. Disabling it stops the overlay and trip-reading feature but does not delete your account or existing trip history.</p>
+
+</div></div>
+
+<div class="section"><div class="sec-head"><h2>4. Information We Do NOT Collect</h2></div><div class="sec-body">
 <ul><li>Passwords or authentication credentials</li>
 <li>Credit card, banking, or financial account information</li>
 <li>Personal messages, emails, or social media content</li>
-<li>Screen content unrelated to ride request evaluation</li>
+<li>Screen content unrelated to ride request evaluation, or from any app outside the eight listed in Section 3</li>
 <li>Contacts, call logs, photos, camera, or microphone data</li></ul>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>4. OTP Verification Policy</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>5. OTP Verification Policy</h2></div><div class="sec-body">
 <ul><li>OTP codes expire after 5 minutes</li>
 <li>OTP documents are permanently deleted immediately after successful verification</li>
 <li>Failed attempts retain no data</li>
 <li>You may request a new code at any time via Resend Code</li></ul>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>5. Data Retention</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>6. Data Retention</h2></div><div class="sec-body">
 <div class="row"><span class="l">OTP verification codes</span><span class="r">Deleted on verify or 5-min expiry</span></div>
 <div class="row"><span class="l">Driver profile (Firestore)</span><span class="r">Duration of active account</span></div>
+<div class="row"><span class="l">Trip records (accessibility-derived)</span><span class="r">Most recent 100 trips, oldest auto-purged</span></div>
 <div class="row"><span class="l">Subscription records</span><span class="r">12 months after expiry</span></div>
 <div class="row"><span class="l">SMS dispatch log</span><span class="r">30 days</span></div>
 <div class="row"><span class="l">Crash reports</span><span class="r">90 days, then purged</span></div>
 <div class="row"><span class="l">Local app data</span><span class="r">Until app uninstall</span></div>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>6. Account Deletion</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>7. Account Deletion</h2></div><div class="sec-body">
 <p>You can delete your account and all associated data directly inside the app:</p>
 <ul><li>Open Yawatal → Settings → scroll to <strong>Danger Zone</strong> → tap <strong>Delete My Account</strong></li>
 <li>Confirm the deletion in the dialog — your account, trip history, and all stored data will be permanently removed</li></ul>
@@ -100,32 +145,32 @@
 <li>We confirm within 48 hours and complete deletion within 7 business days</li></ul>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>7. Data Security</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>8. Data Security</h2></div><div class="sec-body">
 <ul><li>All data in transit encrypted using TLS 1.2+</li>
 <li>Firestore security rules limit write access to authenticated owner only</li>
-<li>No accessibility screen content is stored on any server</li></ul>
+<li>No accessibility screen content is stored on any server — only the parsed fare/distance/time/zone fields described in Section 3</li></ul>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>8. Your Rights</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>9. Your Rights</h2></div><div class="sec-body">
 <ul><li>Access the personal data we hold about you</li>
 <li>Correct inaccurate information</li>
 <li>Request deletion of your account and data</li>
-<li>Withdraw Accessibility Services consent at any time via Android Settings</li>
-<li>Lodge a complaint with relevant data protection authority in Ethiopia</li></ul>
+<li>Withdraw Accessibility Service consent at any time via Yawatal Settings or Android Settings</li>
+<li>Lodge a complaint with the relevant data protection authority in Ethiopia</li></ul>
 <p>Contact: <a href="mailto:amanieleth@gmail.com">amanieleth@gmail.com</a></p>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>9. Ethiopia Compliance &amp; International Users</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>10. Ethiopia Compliance &amp; International Users</h2></div><div class="sec-body">
 <p>Yawatal operates primarily in Addis Ababa, Ethiopia, and complies with applicable Ethiopian data protection principles including the Ethiopian Computer Crime Proclamation (No. 958/2016).</p>
 <p>Firebase infrastructure may process data in Google LLC data centres under standard contractual clauses for international data transfers.</p>
 </div></div>
 
-<div class="section"><div class="sec-head"><h2>10. Contact</h2></div><div class="sec-body">
+<div class="section"><div class="sec-head"><h2>11. Contact</h2></div><div class="sec-body">
 <div class="row"><span class="l">Developer</span><span class="r">Yawatal Technologies</span></div>
 <div class="row"><span class="l">Email</span><span class="r"><a href="mailto:amanieleth@gmail.com">amanieleth@gmail.com</a></span></div>
 <div class="row"><span class="l">Website</span><span class="r"><a href="https://amanieleth-hub.github.io/Yawatal_web/">amanieleth-hub.github.io/Yawatal_web</a></span></div>
 </div></div>
 
 </div>
-<div class="footer">© 2026 Yawatal Technologies · Effective June 10, 2026</div>
+<div class="footer">© 2026 Yawatal Technologies · Effective July 21, 2026</div>
 </body></html>
